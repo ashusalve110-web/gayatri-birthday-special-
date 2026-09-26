@@ -1,0 +1,289 @@
+index.html
+g1.jpg
+g2.jpg
+g3.jpg
+music.mp3<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Gaytri ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff6ec4,#7873f5);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.hero{
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:3rem;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #fff;}
+to{ text-shadow:0 0 30px #ff1493;}
+}
+
+.hero p{
+max-width:700px;
+margin:20px auto;
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:40px 20px;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+padding:15px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
+
+.card img{
+width:250px;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+border:3px solid white;
+}
+
+.card h3{
+margin-top:10px;
+}
+
+.cake-section{
+padding:40px;
+}
+
+.flame{
+font-size:50px;
+animation:flicker .5s infinite alternate;
+}
+
+@keyframes flicker{
+from{transform:translateY(0);}
+to{transform:translateY(-5px);}
+}
+
+.cake{
+font-size:140px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff1493;
+font-weight:bold;
+cursor:pointer;
+margin-top:20px;
+}
+
+.hidden{
+display:none;
+}
+
+#letter{
+max-width:800px;
+margin:40px auto;
+padding:30px;
+background:rgba(255,255,255,0.15);
+border-radius:20px;
+line-height:1.8;
+font-size:1.2rem;
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+pointer-events:none;
+animation:float 6s linear forwards;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+top:-10px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+.footer{
+padding:40px;
+font-size:1.4rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>🎂 Happy Birthday Gaytri ❤️</h1>
+
+<p>
+From your cute childhood memories 🌸
+to the wonderful person you are today ✨
+you have always been special.
+
+May your life be filled with happiness,
+success, laughter and beautiful memories.
+
+Wishing you a day full of smiles and joy ❤️
+</p>
+</div>
+
+<h2>🌸 Gaytri's Beautiful Journey 🌸</h2>
+
+<div class="gallery">
+
+<div class="card">
+<img src="g1.jpg">
+<h3>Little Princess 👑</h3>
+</div>
+
+<div class="card">
+<img src="g2.jpg">
+<h3>Growing Beautiful 🌷</h3>
+</div>
+
+<div class="card">
+<img src="g3.jpg">
+<h3>The Amazing Gaytri ❤️</h3>
+</div>
+
+</div>
+
+<div class="cake-section">
+
+<div id="flame" class="flame">🕯️</div>
+
+<div class="cake">🎂</div>
+
+<button onclick="blowCandle()">
+💨 Blow Candle
+</button>
+
+</div>
+
+<div id="letter" class="hidden">
+
+<h2>💌 Dear Gaytri 💌</h2>
+
+<p>
+
+Every photo tells a story,
+every smile spreads happiness,
+and every moment becomes beautiful.
+
+May all your dreams come true.
+May success always walk beside you.
+May happiness never leave your side.
+
+You deserve all the love,
+all the joy,
+and all the beautiful things in life.
+
+❤️ Happy Birthday Gaytri ❤️
+
+</p>
+
+</div>
+
+<div class="footer">
+🌹 You Are Truly Special 🌹
+</div>
+
+<script>
+
+setInterval(()=>{
+
+let h=document.createElement("div");
+
+h.innerHTML="❤️";
+
+h.className="heart";
+
+h.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+
+},400);
+
+function blowCandle(){
+
+document.getElementById("flame").style.display="none";
+
+document.getElementById("letter")
+.classList.remove("hidden");
+
+for(let i=0;i<250;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=
+`hsl(${Math.random()*360},100%,50%)`;
+
+c.style.animationDuration=
+(2+Math.random()*3)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},6000);
+}
+
+}
+
+</script>
+
+</body>
+</html>
