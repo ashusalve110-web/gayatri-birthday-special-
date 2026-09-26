@@ -1,0 +1,113 @@
+index.html
+g1.jpg
+g2.jpg
+g3.jpg
+music.mp3<div id="loader">
+   <h1>💖 A Special Surprise For Gaytri 💖</h1>
+</div>
+
+<audio autoplay loop>
+   <source src="music.mp3" type="audio/mpeg">
+</audio> <section class="letter hidden" id="letter">
+
+<h1>💌 Dear Gaytri 💌</h1>
+
+<p>
+From your cute childhood memories 🌸
+to the wonderful person you are today ✨
+
+Every photo tells a story,
+every smile spreads happiness,
+and every moment with you becomes special.
+
+May your birthday be filled with joy,
+success, laughter and endless blessings.
+
+You deserve all the happiness in the world ❤️
+
+🎂 Happy Birthday Gaytri 🎂
+</p>
+
+</section>.heart{
+position:fixed;
+font-size:25px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}setInterval(()=>{
+
+let h=document.createElement("div");
+h.innerHTML="❤️";
+h.className="heart";
+
+h.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+
+},400);function blowCandle(){
+
+document.getElementById("flame").style.display="none";
+
+document.getElementById("letter")
+.classList.remove("hidden");
+
+for(let i=0;i<300;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=
+`hsl(${Math.random()*360},100%,50%)`;
+
+c.style.animationDuration=
+(2+Math.random()*3)+"s";
+
+document.body.appendChild(c);
+
+}
+}<h1>🌸 Gaytri's Beautiful Journey 🌸</h1>
+
+<div class="gallery">
+
+<div>
+<img src="g1.jpg">
+<h3>Little Princess 👑</h3>
+</div>
+
+<div>
+<img src="g2.jpg">
+<h3>Growing Beautiful 🌷</h3>
+</div>
+
+<div>
+<img src="g3.jpg">
+<h3>The Amazing Gaytri ❤️</h3>
+</div>
+
+</div><div class="final-text">
+
+✨ Some people are special because they are beautiful.
+
+✨ Some people are special because they are kind.
+
+✨ But Gaytri is special because she is both. ❤️
+
+🌹 Happy Birthday Gaytri 🌹
+
+</div>
